@@ -106,8 +106,8 @@ const HeroSection: React.FC = () => {
                   className="group relative inline-flex items-center justify-center px-10 h-20 rounded-full text-xl font-bold text-white transition-all duration-300 transform active:scale-95 w-full sm:w-auto min-w-[260px] overflow-hidden"
                 >
                   {/* Background & Shadow */}
-                  <span className="absolute inset-0 rounded-full bg-gradient-to-r from-teal-500 via-purple-600 to-blue-600 opacity-90 group-hover:opacity-100 blur-md transition-opacity duration-500" />
-                  <span className="absolute inset-0 rounded-full bg-gradient-to-r from-teal-500 via-purple-600 to-blue-600 transition-all duration-300 group-hover:scale-[1.02] border border-white/20" />
+                  <span className="absolute inset-0 rounded-full bg-gradient-to-r from-amber-600 via-orange-600 to-yellow-600 opacity-90 group-hover:opacity-100 blur-md transition-opacity duration-500" />
+                  <span className="absolute inset-0 rounded-full bg-gradient-to-r from-amber-600 via-orange-600 to-yellow-600 transition-all duration-300 group-hover:scale-[1.02] border border-white/20" />
 
                   {/* Shine Effect */}
                   <span className="absolute inset-0 rounded-full overflow-hidden">

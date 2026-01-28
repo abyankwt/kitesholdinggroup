@@ -28,31 +28,45 @@ const FloatingGeometry = () => {
             <pointLight position={[10, 10, 10]} intensity={1} color="#60a5fa" />
             <pointLight position={[-10, -10, -10]} intensity={1} color="#2dd4bf" />
 
-            {/* Main Crystal */}
-            <Float speed={2} rotationIntensity={0.5} floatIntensity={1}>
-                <Icosahedron ref={shape1} args={[1.5, 0]} position={[0, 0, 0]}>
+            {/* Main Golden Geometric Seed */}
+            <Float speed={2} rotationIntensity={0.6} floatIntensity={1.2}>
+                <Icosahedron ref={shape1} args={[1.6, 0]} position={[0, 0, 0]} rotation={[0.4, 0.2, 0]}>
                     <meshStandardMaterial
-                        color="#ffffff"
-                        roughness={0.1}
-                        metalness={0.8}
+                        color="#D4AF37" // Pure Gold
+                        roughness={0.2}
+                        metalness={0.9}
+                        emissive="#D4AF37"
+                        emissiveIntensity={0.2}
                         transparent
-                        opacity={0.8}
+                        opacity={0.9}
                         wireframe={true}
                     />
                 </Icosahedron>
             </Float>
 
-            {/* Surrounding Ring */}
-            <Float speed={1.5} rotationIntensity={1} floatIntensity={0.5}>
-                <Torus ref={shape2} args={[2.5, 0.05, 16, 100]} position={[0, 0, 0]} rotation={[Math.PI / 2, 0, 0]}>
+            {/* Bronze Ring Orbit */}
+            <Float speed={1.5} rotationIntensity={1} floatIntensity={0.8}>
+                <Torus ref={shape2} args={[2.8, 0.03, 16, 100]} position={[0, 0, 0]} rotation={[Math.PI / 2.5, 0, 0]}>
                     <meshStandardMaterial
-                        color="#2dd4bf"
-                        emissive="#2dd4bf"
-                        emissiveIntensity={2}
-                        roughness={0}
+                        color="#CD7F32" // Bronze
+                        emissive="#CD7F32"
+                        emissiveIntensity={1.5}
+                        roughness={0.1}
                         metalness={1}
                     />
                 </Torus>
+            </Float>
+
+            {/* Inner Espresso Core */}
+            <Float speed={3} rotationIntensity={0.2} floatIntensity={0.5}>
+                <mesh position={[0, 0, 0]}>
+                    <dodecahedronGeometry args={[0.8, 0]} />
+                    <meshStandardMaterial
+                        color="#3E2723" // Deep Espresso
+                        roughness={0.1}
+                        metalness={0.8}
+                    />
+                </mesh>
             </Float>
         </group>
     );

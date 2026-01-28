@@ -13,10 +13,10 @@ function Stars(props: any) {
         const colors = new Float32Array(count * 3);
 
         const colorPalette = [
-            new THREE.Color('#2dd4bf'), // Teal (Main)
-            new THREE.Color('#a855f7'), // Purple (Depth)
-            new THREE.Color('#3b82f6'), // Blue (Atmosphere)
-            new THREE.Color('#ffffff'), // Stars (Highlights)
+            new THREE.Color('#D4AF37'), // Gold (Main)
+            new THREE.Color('#CD7F32'), // Bronze (Depth)
+            new THREE.Color('#FFFFFF'), // White (Stars)
+            new THREE.Color('#8B4513'), // Saddle Brown (Warmth)
         ];
 
         for (let i = 0; i < count; i++) {

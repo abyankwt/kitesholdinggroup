@@ -56,8 +56,8 @@ const CompaniesSection: React.FC = () => {
       descKey: 'companies.kites.desc',
       tagKey: 'companies.kites.tag',
       url: 'https://kites-kw.com/',
-      accentColor: 'bg-teal-500',
-      borderColor: 'border-t-teal-500',
+      accentColor: 'bg-amber-500',
+      borderColor: 'border-t-amber-500',
       icon: Cpu,
     },
     {
@@ -65,8 +65,8 @@ const CompaniesSection: React.FC = () => {
       descKey: 'companies.creality.desc',
       tagKey: 'companies.creality.tag',
       url: 'https://creality.com.kw/',
-      accentColor: 'bg-blue-500',
-      borderColor: 'border-t-blue-500',
+      accentColor: 'bg-orange-600',
+      borderColor: 'border-t-orange-600',
       icon: Printer,
     },
     {
@@ -74,8 +74,8 @@ const CompaniesSection: React.FC = () => {
       descKey: 'companies.abyan.desc',
       tagKey: 'companies.abyan.tag',
       url: 'https://www.abyan.com.kw/',
-      accentColor: 'bg-orange-500',
-      borderColor: 'border-t-orange-500',
+      accentColor: 'bg-amber-700',
+      borderColor: 'border-t-amber-700',
       icon: HardHat,
     },
   ];

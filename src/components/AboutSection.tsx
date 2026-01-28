@@ -104,10 +104,10 @@ const AboutSection: React.FC = () => {
             <TiltCard className={cn(
               "about-card md:col-span-2 lg:col-span-2 md:row-span-2",
             )} intensity={10}>
-              <SpotlightCard className="bg-white/5 backdrop-blur-2xl rounded-[2rem] p-10 h-full border border-white/10 shadow-2xl flex flex-col justify-center relative group hover:bg-white/[0.08] transition-all duration-700" spotlightColor="rgba(45, 212, 191, 0.1)">
-                <div className="absolute top-0 right-0 w-96 h-96 bg-accent/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2 group-hover:bg-accent/20 transition-colors duration-700" />
-                <h3 className="text-3xl font-bold mb-6 z-10 text-white tracking-tight-apple translate-z-10">{isRTL ? 'رؤيتنا' : 'Our Vision'}</h3>
-                <p className="text-xl text-slate-300 leading-relaxed z-10 font-medium tracking-tight translate-z-10">
+              <SpotlightCard className="bg-white/5 backdrop-blur-2xl rounded-[2rem] p-10 h-full border border-white/10 shadow-2xl flex flex-col justify-center relative group hover:bg-white/[0.08] transition-all duration-700 overflow-hidden" spotlightColor="rgba(212, 175, 55, 0.15)">
+                <div className="absolute top-0 right-0 w-96 h-96 bg-accent/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2 group-hover:bg-accent/20 transition-colors duration-700 pointer-events-none" />
+                <h3 className="text-3xl font-bold mb-6 z-10 text-white tracking-tight-apple translate-z-10 relative">{isRTL ? 'رؤيتنا' : 'Our Vision'}</h3>
+                <p className="text-xl text-slate-300 leading-relaxed z-10 font-medium tracking-tight translate-z-10 relative">
                   {t('about.text')}
                 </p>
               </SpotlightCard>
