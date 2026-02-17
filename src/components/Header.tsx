@@ -56,7 +56,7 @@ const Header: React.FC = () => {
               alt="KITES Holding Group"
               className="h-8 md:h-12 w-auto object-contain shrink-0"
             />
-            <span className="text-white font-bold tracking-[0.2em] text-xs md:text-sm uppercase whitespace-nowrap hidden sm:block">
+            <span className="text-white font-bold tracking-[0.2em] text-xs md:text-sm uppercase whitespace-nowrap block">
               KITES HOLDING GROUP
             </span>
           </a>
@@ -90,7 +90,7 @@ const Header: React.FC = () => {
                 <div className="absolute top-full left-0 mt-2 w-56 bg-black/90 backdrop-blur-xl border border-white/10 rounded-2xl shadow-xl overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                   <div className="py-2 flex flex-col">
                     <a
-                      href="https://kites-kw.com/"
+                      href="https://kitesconsulting.kites.com.kw"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="px-4 py-3 text-xs font-bold text-slate-400 hover:text-white hover:bg-white/5 transition-all flex items-center justify-between group/item"
