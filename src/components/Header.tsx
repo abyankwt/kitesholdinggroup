@@ -50,16 +50,21 @@ const Header: React.FC = () => {
 
         {/* Logo Section */}
         <div className={cn('flex items-center gap-4 relative z-10', isRTL && 'order-last md:order-first')}>
-          <a href="#" className="block hover:opacity-80 transition-opacity">
+          <a href="#" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
             <img
               src={kitesLogo}
               alt="KITES Holding Group"
-              className="h-12 md:h-20 w-auto object-contain brightness-0 invert shrink-0"
+              className="h-8 md:h-12 w-auto object-contain shrink-0"
             />
+            <span className="text-white font-bold tracking-[0.2em] text-xs md:text-sm uppercase whitespace-nowrap hidden sm:block">
+              KITES HOLDING GROUP
+            </span>
           </a>
-          {/* Vertical Divider */}
-          <div className="h-10 w-px bg-white/10 mx-2 hidden lg:block" />
         </div>
+
+
+        {/* Vertical Divider */}
+        <div className={cn("h-8 w-px bg-white/30 hidden lg:block relative z-10", isRTL ? "mr-10 ml-4" : "ml-10 mr-4")} />
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-1 relative z-10 mx-2">
@@ -68,7 +73,7 @@ const Header: React.FC = () => {
               <ScrollLink
                 to={link.id}
                 className={cn(
-                  'relative px-5 py-3 text-sm font-bold tracking-widest uppercase text-slate-400 hover:text-white transition-colors duration-300 group overflow-hidden rounded-full block',
+                  'relative px-3 py-3 text-sm font-bold tracking-widest uppercase text-slate-400 hover:text-white transition-colors duration-300 group overflow-hidden rounded-full block',
                   isScrolled ? 'text-slate-400' : 'text-slate-300'
                 )}
               >
