@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { ScrollLink } from './ScrollLink';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ChevronDown, ExternalLink } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import kitesLogo from '@/assets/kites-logo.png';
 
@@ -41,8 +41,8 @@ const Header: React.FC = () => {
     >
       <div
         className={cn(
-          "relative flex items-center justify-between md:justify-start gap-1 p-2 md:p-3 rounded-full border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.2)] transition-all duration-500 backdrop-blur-xl w-full md:w-auto",
-          isScrolled ? "bg-black/60 px-4 md:pr-3 md:pl-8" : "bg-white/[0.03] px-4 md:pr-3 md:pl-8"
+          "relative flex items-center justify-between md:justify-start gap-4 p-3 md:p-4 rounded-full border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.2)] transition-all duration-500 backdrop-blur-xl w-full md:w-auto",
+          isScrolled ? "bg-black/60 px-6 md:pr-6 md:pl-10" : "bg-white/[0.03] px-6 md:pr-6 md:pl-10"
         )}
       >
         {/* Shine effect */}
@@ -54,7 +54,7 @@ const Header: React.FC = () => {
             <img
               src={kitesLogo}
               alt="KITES Holding Group"
-              className="h-10 md:h-16 w-auto object-contain brightness-0 invert shrink-0"
+              className="h-12 md:h-20 w-auto object-contain brightness-0 invert shrink-0"
             />
           </a>
           {/* Vertical Divider */}
@@ -64,17 +64,57 @@ const Header: React.FC = () => {
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-1 relative z-10 mx-2">
           {navLinks.map((link) => (
-            <ScrollLink
-              key={link.key}
-              to={link.id}
-              className={cn(
-                'relative px-4 py-2 text-xs font-bold tracking-widest uppercase text-slate-400 hover:text-white transition-colors duration-300 group overflow-hidden rounded-full',
-                isScrolled ? 'text-slate-400' : 'text-slate-300'
+            <div key={link.key} className="relative group">
+              <ScrollLink
+                to={link.id}
+                className={cn(
+                  'relative px-5 py-3 text-sm font-bold tracking-widest uppercase text-slate-400 hover:text-white transition-colors duration-300 group overflow-hidden rounded-full block',
+                  isScrolled ? 'text-slate-400' : 'text-slate-300'
+                )}
+              >
+                <div className="relative z-10 flex items-center gap-1">
+                  <span>{t(`nav.${link.key}`)}</span>
+                  {link.key === 'companies' && (
+                    <ChevronDown size={14} className="stroke-[3px]" />
+                  )}
+                </div>
+                <span className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full" />
+              </ScrollLink>
+
+              {link.key === 'companies' && (
+                <div className="absolute top-full left-0 mt-2 w-56 bg-black/90 backdrop-blur-xl border border-white/10 rounded-2xl shadow-xl overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                  <div className="py-2 flex flex-col">
+                    <a
+                      href="https://kites-kw.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-4 py-3 text-xs font-bold text-slate-400 hover:text-white hover:bg-white/5 transition-all flex items-center justify-between group/item"
+                    >
+                      <span className="uppercase tracking-wider">KITES</span>
+                      <ExternalLink size={12} className="opacity-0 group-hover/item:opacity-100 transition-opacity" />
+                    </a>
+                    <a
+                      href="https://creality.com.kw/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-4 py-3 text-xs font-bold text-slate-400 hover:text-white hover:bg-white/5 transition-all flex items-center justify-between group/item"
+                    >
+                      <span className="uppercase tracking-wider">Creality Kuwait</span>
+                      <ExternalLink size={12} className="opacity-0 group-hover/item:opacity-100 transition-opacity" />
+                    </a>
+                    <a
+                      href="https://www.abyan.com.kw/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-4 py-3 text-xs font-bold text-slate-400 hover:text-white hover:bg-white/5 transition-all flex items-center justify-between group/item"
+                    >
+                      <span className="uppercase tracking-wider">Abyan</span>
+                      <ExternalLink size={12} className="opacity-0 group-hover/item:opacity-100 transition-opacity" />
+                    </a>
+                  </div>
+                </div>
               )}
-            >
-              <span className="relative z-10">{t(`nav.${link.key}`)}</span>
-              <span className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full" />
-            </ScrollLink>
+            </div>
           ))}
         </nav>
 
