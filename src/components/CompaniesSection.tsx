@@ -54,7 +54,7 @@ const CompaniesSection: React.FC = () => {
       nameKey: 'companies.kites.name',
       descKey: 'companies.kites.desc',
       tagKey: 'companies.kites.tag',
-      url: 'https://kitesconsulting.kites.com.kw/',
+      url: 'https://kitesconsulting.kites.com.kw',
       iconBg: 'bg-gray-100',
       iconColor: 'text-gray-700',
       icon: Cpu,

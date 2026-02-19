@@ -84,7 +84,7 @@ const Header: React.FC = () => {
                 <div className="absolute top-full left-0 mt-2 w-56 bg-white border border-gray-200 rounded-2xl shadow-lg overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                   <div className="py-2 flex flex-col">
                     <a
-                      href="https://kitesconsulting.kites.com.kw/"
+                      href="https://kitesconsulting.kites.com.kw"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="px-4 py-3 text-xs font-bold text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-all flex items-center justify-between group/item"
