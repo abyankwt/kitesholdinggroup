@@ -29,7 +29,7 @@ const ContactSection: React.FC = () => {
     {
       icon: MapPin,
       label: 'Location',
-      value: 'Kuwait City, Kuwait',
+      value: '4th Floor, Lulu Al Watan Complex, Beirut St., Hawally, Kuwait',
     },
     {
       icon: Mail,
@@ -40,8 +40,8 @@ const ContactSection: React.FC = () => {
     {
       icon: Phone,
       label: 'Phone',
-      value: '+965 XXXX XXXX',
-      href: 'tel:+965XXXXXXXX',
+      value: '+965 22092260',
+      href: 'tel:+96522092260',
     },
   ];
 
@@ -53,35 +53,35 @@ const ContactSection: React.FC = () => {
     <section
       id="contact"
       ref={sectionRef}
-      className="py-24 lg:py-32 hero-gradient"
+      className="py-24 lg:py-32 bg-[#F7F8FA]"
     >
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto text-center">
           <div className="section-divider" />
 
-          {/* Title - stronger hierarchy */}
+          {/* Title */}
           <h2
-            className="animate-on-scroll opacity-0 text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6"
+            className="animate-on-scroll opacity-0 text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 mb-6"
           >
             {t('nav.contact')}
           </h2>
 
           {/* Trust-building sentence */}
           <p
-            className="animate-on-scroll opacity-0 text-lg md:text-xl text-accent-glow font-semibold mb-4 leading-relaxed max-w-3xl mx-auto"
+            className="animate-on-scroll opacity-0 text-lg md:text-xl text-[#1E3A5F] font-semibold mb-4 leading-relaxed max-w-3xl mx-auto"
             style={{ animationDelay: '0.05s' }}
           >
             {t('contact.trust')}
           </p>
 
           <p
-            className="animate-on-scroll opacity-0 text-base text-white/80 mb-14 max-w-2xl mx-auto"
+            className="animate-on-scroll opacity-0 text-base text-gray-600 mb-14 max-w-2xl mx-auto"
             style={{ animationDelay: '0.1s' }}
           >
             {introText}
           </p>
 
-          {/* Contact Cards - improved elevation and spacing */}
+          {/* Contact Cards */}
           <div
             className={cn(
               'grid md:grid-cols-3 gap-8',
@@ -94,20 +94,20 @@ const ContactSection: React.FC = () => {
                 className="animate-on-scroll opacity-0"
                 style={{ animationDelay: `${0.2 + index * 0.1}s` }}
               >
-                <div className="flex flex-col items-center justify-center p-8 bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl hover:bg-white/10 hover:-translate-y-2 hover:shadow-2xl hover:shadow-accent/10 transition-all duration-300 group h-full">
-                  <div className="w-16 h-16 rounded-full bg-accent/20 mx-auto flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <item.icon className="text-accent" size={28} />
+                <div className="flex flex-col items-center justify-center p-8 bg-white border border-gray-200 rounded-3xl hover:shadow-md hover:-translate-y-2 transition-all duration-300 group h-full shadow-sm">
+                  <div className="w-16 h-16 rounded-full bg-slate-100 border border-slate-200 mx-auto flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <item.icon className="text-[#1E3A5F]" size={28} />
                   </div>
-                  <h3 className="text-sm font-bold text-slate-300 mb-3 uppercase tracking-wider">{item.label}</h3>
+                  <h3 className="text-sm font-bold text-gray-500 mb-3 uppercase tracking-wider">{item.label}</h3>
                   {item.href ? (
                     <a
                       href={item.href}
-                      className="text-white font-bold text-xl hover:text-accent transition-colors"
+                      className="text-gray-900 font-bold text-xl hover:text-[#1E3A5F] transition-colors"
                     >
                       {item.value}
                     </a>
                   ) : (
-                    <div className="text-white font-bold text-xl">{item.value}</div>
+                    <div className="text-gray-900 font-bold text-xl">{item.value}</div>
                   )}
                 </div>
               </div>

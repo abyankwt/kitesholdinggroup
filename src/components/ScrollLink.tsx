@@ -24,7 +24,7 @@ export const ScrollLink: React.FC<ScrollLinkProps> = ({ to, children, className,
       href={`#${to}`}
       onClick={handleClick}
       className={cn(
-        'cursor-pointer transition-colors duration-200 hover:text-accent',
+        'cursor-pointer transition-colors duration-200 hover:text-current',
         className
       )}
     >

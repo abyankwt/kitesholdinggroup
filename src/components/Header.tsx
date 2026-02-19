@@ -41,30 +41,27 @@ const Header: React.FC = () => {
     >
       <div
         className={cn(
-          "relative flex items-center justify-between md:justify-start gap-4 p-3 md:p-4 rounded-full border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.2)] transition-all duration-500 backdrop-blur-xl w-full md:w-auto",
-          isScrolled ? "bg-black/60 px-6 md:pr-6 md:pl-10" : "bg-white/[0.03] px-6 md:pr-6 md:pl-10"
+          "relative flex items-center justify-between md:justify-start gap-4 p-3 md:p-4 rounded-full border border-gray-200 shadow-md transition-all duration-500 w-full md:w-auto",
+          isScrolled ? "bg-white/98 px-6 md:pr-6 md:pl-10" : "bg-white/90 px-6 md:pr-6 md:pl-10"
         )}
+        style={{ backdropFilter: 'blur(12px)' }}
       >
-        {/* Shine effect */}
-        <div className="absolute inset-0 rounded-full bg-gradient-to-r from-transparent via-white/5 to-transparent pointer-events-none" />
-
         {/* Logo Section */}
         <div className={cn('flex items-center gap-4 relative z-10', isRTL && 'order-last md:order-first')}>
-          <a href="#" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+          <a href="#" className="flex items-center gap-2 hover:opacity-75 transition-opacity">
             <img
               src={kitesLogo}
               alt="KITES Holding Group"
               className="h-8 md:h-12 w-auto object-contain shrink-0"
             />
-            <span className="text-white font-bold tracking-[0.2em] text-xs md:text-sm uppercase whitespace-nowrap hidden sm:block">
+            <span className="text-gray-900 font-bold tracking-[0.2em] text-xs md:text-sm uppercase whitespace-nowrap">
               KITES HOLDING GROUP
             </span>
           </a>
         </div>
 
-
         {/* Vertical Divider */}
-        <div className={cn("h-8 w-px bg-white/30 hidden lg:block relative z-10", isRTL ? "mr-10 ml-4" : "ml-10 mr-4")} />
+        <div className={cn("h-8 w-px bg-gray-200 hidden lg:block relative z-10", isRTL ? "mr-10 ml-4" : "ml-10 mr-4")} />
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-1 relative z-10 mx-2">
@@ -72,10 +69,7 @@ const Header: React.FC = () => {
             <div key={link.key} className="relative group">
               <ScrollLink
                 to={link.id}
-                className={cn(
-                  'relative px-3 py-3 text-sm font-bold tracking-widest uppercase text-slate-400 hover:text-white transition-colors duration-300 group overflow-hidden rounded-full block',
-                  isScrolled ? 'text-slate-400' : 'text-slate-300'
-                )}
+                className="relative px-3 py-3 text-sm font-bold tracking-widest uppercase text-gray-500 hover:text-gray-900 transition-colors duration-300 group overflow-hidden rounded-full block"
               >
                 <div className="relative z-10 flex items-center gap-1">
                   <span>{t(`nav.${link.key}`)}</span>
@@ -83,17 +77,17 @@ const Header: React.FC = () => {
                     <ChevronDown size={14} className="stroke-[3px]" />
                   )}
                 </div>
-                <span className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full" />
+                <span className="absolute inset-0 bg-gray-100 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full" />
               </ScrollLink>
 
               {link.key === 'companies' && (
-                <div className="absolute top-full left-0 mt-2 w-56 bg-black/90 backdrop-blur-xl border border-white/10 rounded-2xl shadow-xl overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                <div className="absolute top-full left-0 mt-2 w-56 bg-white border border-gray-200 rounded-2xl shadow-lg overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                   <div className="py-2 flex flex-col">
                     <a
-                      href="https://kites-kw.com/"
+                      href="https://kitesconsulting.kites.com.kw/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-4 py-3 text-xs font-bold text-slate-400 hover:text-white hover:bg-white/5 transition-all flex items-center justify-between group/item"
+                      className="px-4 py-3 text-xs font-bold text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-all flex items-center justify-between group/item"
                     >
                       <span className="uppercase tracking-wider">KITES</span>
                       <ExternalLink size={12} className="opacity-0 group-hover/item:opacity-100 transition-opacity" />
@@ -102,7 +96,7 @@ const Header: React.FC = () => {
                       href="https://creality.com.kw/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-4 py-3 text-xs font-bold text-slate-400 hover:text-white hover:bg-white/5 transition-all flex items-center justify-between group/item"
+                      className="px-4 py-3 text-xs font-bold text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-all flex items-center justify-between group/item"
                     >
                       <span className="uppercase tracking-wider">Creality Kuwait</span>
                       <ExternalLink size={12} className="opacity-0 group-hover/item:opacity-100 transition-opacity" />
@@ -111,7 +105,7 @@ const Header: React.FC = () => {
                       href="https://www.abyan.com.kw/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-4 py-3 text-xs font-bold text-slate-400 hover:text-white hover:bg-white/5 transition-all flex items-center justify-between group/item"
+                      className="px-4 py-3 text-xs font-bold text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-all flex items-center justify-between group/item"
                     >
                       <span className="uppercase tracking-wider">Abyan</span>
                       <ExternalLink size={12} className="opacity-0 group-hover/item:opacity-100 transition-opacity" />
@@ -127,14 +121,14 @@ const Header: React.FC = () => {
         <div className={cn('flex items-center gap-2 relative z-10', isRTL && 'order-first md:order-last')}>
           <button
             onClick={toggleLanguage}
-            className="px-5 py-2 text-[10px] font-black tracking-wider rounded-full border border-white/10 bg-white/5 text-white hover:bg-accent hover:border-accent hover:text-black transition-all duration-300 uppercase"
+            className="px-5 py-2 text-[10px] font-black tracking-wider rounded-full border border-gray-200 bg-gray-50 text-gray-700 hover:bg-accent hover:border-accent hover:text-white transition-all duration-300 uppercase"
           >
             {language === 'en' ? 'العربية' : 'EN'}
           </button>
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-3 text-white bg-white/5 rounded-full hover:bg-white/10 transition-colors border border-white/5"
+            className="lg:hidden p-3 text-gray-700 bg-gray-100 rounded-full hover:bg-gray-200 transition-colors border border-gray-200"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -145,13 +139,13 @@ const Header: React.FC = () => {
 
       {/* Mobile Menu Dropdown */}
       {isMobileMenuOpen && (
-        <div className="absolute top-full left-0 right-0 mt-4 mx-auto w-[90vw] max-w-md p-2 rounded-[2rem] bg-black/80 backdrop-blur-3xl border border-white/10 shadow-2xl overflow-hidden animate-fade-in-up">
+        <div className="absolute top-full left-0 right-0 mt-4 mx-auto w-[90vw] max-w-md p-2 rounded-[2rem] bg-white border border-gray-200 shadow-xl overflow-hidden animate-fade-in-up">
           <div className="flex flex-col gap-1">
             {navLinks.map((link) => (
               <ScrollLink
                 key={link.key}
                 to={link.id}
-                className="text-slate-300 text-sm font-medium py-4 px-6 rounded-[1.5rem] hover:bg-white/10 hover:text-white transition-all text-center border border-transparent hover:border-white/5"
+                className="text-gray-700 text-sm font-medium py-4 px-6 rounded-[1.5rem] hover:bg-gray-100 hover:text-gray-900 transition-all text-center border border-transparent hover:border-gray-200"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {t(`nav.${link.key}`)}
