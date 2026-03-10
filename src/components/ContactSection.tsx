@@ -34,8 +34,8 @@ const ContactSection: React.FC = () => {
     {
       icon: Mail,
       label: 'Email',
-      value: 'info@kitesholding.com',
-      href: 'mailto:info@kitesholding.com',
+      value: 'info@kites.com.kw',
+      href: 'mailto:info@kites.com.kw',
     },
     {
       icon: Phone,
